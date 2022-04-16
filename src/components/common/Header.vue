@@ -20,7 +20,7 @@
                     <img src="../../assets/img/img.jpg" />
                 </div>
                 <!-- 用户名下拉菜单 -->
-                <el-dropdown class="user-name" trigger="click" @command="handleCommand">
+                <el-dropdown class="user-name" trigger="click">
                     <span class="el-dropdown-link" @click="signOut()">
                        退出登录
                     </span>

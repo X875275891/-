@@ -95,12 +95,7 @@ const routes = [
 
             },
             
-            {
-                // 权限页面
-                path: '/permission',
-                component: () => import(/* webpackChunkName: "permission" */ '../components/page/Permission.vue'),
-                meta: { title: '权限测试', permission: true }
-            },
+
             {
                 path: '/404',
                 component: () => import(/* webpackChunkName: "404" */ '../components/page/404.vue'),

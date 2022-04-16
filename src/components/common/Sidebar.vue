@@ -85,7 +85,6 @@ export default {
                             index: 'achievement',
                             title: '本人成就'
                         },
-                        
                     ]
                 },
                
