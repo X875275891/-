@@ -2,30 +2,41 @@
     <div class="login-wrap">
         <div class="ms-login">
             <div class="ms-title">高校教师科研管理系统</div>
-            <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
+            <el-form ref="register" :model="param" :rules="rules"  label-width="0px" class="ms-content">
+                <!-- 用户名 -->
                 <el-form-item prop="username">
                     <el-input v-model="param.username" placeholder="username">
                         <el-button slot="prepend" icon="el-icon-lx-people"></el-button>
                     </el-input>
                 </el-form-item>
+                <!-- 密码 -->
                 <el-form-item prop="password">
                     <el-input
                         type="password"
                         placeholder="password"
                         v-model="param.password"
-                        @keyup.enter.native="submitForm()"
                     >
                         <el-button slot="prepend" icon="el-icon-lx-lock"></el-button>
                     </el-input>
                 </el-form-item>
-                <div class="login-btn">
-                    <el-button type="primary" @click="submitForm()">登录</el-button>
+                <!-- 学校 -->
+                <el-form-item prop="school">
+                    <el-input v-model="param.school" placeholder="school">
+                        <el-button slot="prepend" icon="el-icon-lx-group"></el-button>
+                    </el-input>
+                </el-form-item>
+                <!-- 身份 -->
+                <div class="identiy">
+                    <el-radio v-model="radio" label="1">管理员</el-radio>
+                    <el-radio v-model="radio" label="2">教师</el-radio>
+                    <el-radio v-model="radio" label="3">普通用户</el-radio>
                 </div>
+                
+                <!-- 注册 -->
                 <div class="login-btn">
-                    <el-button type="primary" @click="submitForm2()">注册</el-button>
+                    <el-button type="primary" @click="register()">注册</el-button>
                 </div>
-                <p class="login-tips">Tips : 没有账号？去注册。</p>
-
+                <!-- <p class="login-tips">Tips : 用户名和密码随便填。</p> -->
             </el-form>
         </div>
     </div>
@@ -35,30 +46,28 @@
 export default {
     data: function() {
         return {
+            radio: '3',
             param: {},
             rules: {
                 username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
                 password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+                school: [{ required: true, message: '请输入您所在的学校', trigger: 'blur' }],
+                // identity: [{ required: true, message: '请选择您注册的身份', trigger: 'blur' }],
             },
         };
     },
     methods: {
-        submitForm() {
-            this.$refs.login.validate(valid => {
+        register() {
+             this.$refs.register.validate(valid => {
                 if (valid) {
-                    this.$message.success('登录成功');
+                    this.$message.success('注册成功');
                     localStorage.setItem('ms_username', this.param.username);
                     this.$router.push('/dashboard');
                 } else {
-                    this.$message.error('请输入账号和密码');
+                    this.$message.error('请填写完整信息！');
                     console.log('error submit!!');
                     return false;
                 }
-            });
-        },
-        submitForm2() {
-            this.$refs.login.validate(valid => {
-                this.$router.push('/register');
             });
         },
     },
@@ -66,6 +75,15 @@ export default {
 </script>
 
 <style scoped>
+.identiy{
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+.el-radio {
+    color: #fff;
+}
 .login-wrap {
     position: relative;
     width: 100%;

@@ -57,83 +57,83 @@ export default {
             collapse: false,
             items: [
                 {
-                    icon: 'el-icon-lx-home',
+                    icon: 'el-icon-lx-profile',
                     index: 'dashboard',
                     title: '主页'
                 },
                 {
-                    icon: 'el-icon-lx-cascades',
+                    icon: 'el-icon-lx-read',
                     index: 'addPaper',
                     title: '添加论文'
                 },
                 {
-                    icon: 'el-icon-lx-copy',
+                    icon: 'el-icon-lx-read',
                     index: 'addItem',
                     title: '添加项目'
                 },
                 {
-                    icon: 'el-icon-lx-copy',
+                    icon: 'el-icon-lx-read',
                     index: 'addPatent',
                     title: '添加专利'
                 },
                 {
-                    icon: 'el-icon-lx-calendar',
-                    index: '3',
-                    title: '查看通过',
-                    subs: [
-                        {
-                            index: 'form',
-                            title: '通过论文'
-                        },
-                        {
-                            index: 'form',
-                            title: '通过项目'
-                        },
-                        {
-                            index: 'form',
-                            title: '通过专利'
-                        },
-                    ]
-                },
-                {
-                    icon: 'el-icon-lx-calendar',
-                    index: '3',
-                    title: '查看提交',
-                    subs: [
-                        {
-                            index: 'form',
-                            title: '查看论文'
-                        },
-                        {
-                            index: 'form',
-                            title: '查看项目'
-                        },
-                        {
-                            index: 'form',
-                            title: '查看专利'
-                        },
-                    ]
-                },
-                {
-                    icon: 'el-icon-lx-calendar',
-                    index: '3',
+                    icon: 'el-icon-lx-news',
+                    index: '5',
                     title: '个人信息',
                     subs: [
                         {
-                            index: 'form',
-                            title: '查看论文'
+                            index: 'achievement',
+                            title: '本人成就'
+                        },
+                        
+                    ]
+                },
+               
+                {
+                    icon: 'el-icon-lx-crown',
+                    index: '7',
+                    title: '成果管理',
+                    subs: [
+                        {
+                            index: 'controlPapper',
+                            title: '管理论文'
                         },
                         {
-                            index: 'form',
-                            title: '查看项目'
+                            index: 'controlItem',
+                            title: '管理项目'
                         },
                         {
-                            index: 'form',
-                            title: '查看专利'
+                            index: 'controlPatent',
+                            title: '管理专利'
                         },
                     ]
                 },
-                
+                {
+                    icon: 'el-icon-lx-group',
+                    index: '8',
+                    title: '教师管理',
+                    subs: [
+                        {
+                            index: 'addTeacher',
+                            title: '添加教师'
+                        },
+                        {
+                            index: 'account ',
+                            title: '账号管理'
+                        },
+   
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-sort',
+                    index: 'controlPeriodical',
+                    title: '刊库管理'
+                },
+                {
+                    icon: 'el-icon-lx-home',
+                    index: 'schoolInfo',
+                    title: '学院信息'
+                },
             ]
         };
     },
