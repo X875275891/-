@@ -1,13 +1,5 @@
 {
-    "list": [{
-            "id": 1,
-            "name": "张三",
-            "money": 123,
-            "address": "广东省东莞市长安镇",
-            "state": "成功",
-            "date": "2019-11-1",
-            "thumb": "https://lin-xin.gitee.io/images/post/wms.png"
-        },
+    "list": [
         {
             "id": 2,
             "name": "李四",
@@ -34,6 +26,125 @@
             "state": "成功",
             "date": "2019-10-20",
             "thumb": "https://lin-xin.gitee.io/images/post/notice.png"
+        }
+    ],
+    "item":[
+        {
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },
+        {
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },
+        {
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },
+        {
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },
+        {
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
+        },{
+            "itemName":"临床医生对临床研究方法学认知及需求调查研究",
+            "itemGrade":"三级",
+            "leader":"黄蓉蓉",
+            "participants":"何花何艳陈璐",
+            "cost":"100",
+            "date":"2019-10-11",
+            "endDate":"2019-10-11"
         }
     ],
     "pageTotal": 4

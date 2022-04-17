@@ -27,23 +27,28 @@
             >
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <!-- <el-table-column prop="id" label="刊物编码" width="55" align="center"></el-table-column> -->
-                <el-table-column prop="name" label="项目名称"></el-table-column>
+                <el-table-column prop="itemName" label="项目名称"></el-table-column>
+                <el-table-column prop="itemGrade" label="项目等级"></el-table-column>
                 
-                <el-table-column label="项目等级">
-                    <template slot-scope="scope">￥{{scope.row.money}}</template>
+                <el-table-column prop="leader" label="负责人"></el-table-column>
+                <el-table-column prop="participants" label="参与人"></el-table-column>
+                <el-table-column label="项目经费（万）">
+                    <template slot-scope="scope">￥{{scope.row.cost}}</template>
                 </el-table-column>
-                <el-table-column prop="name" label="负责人"></el-table-column>
-                <el-table-column prop="name" label="参与人"></el-table-column>
-                <el-table-column prop="name" label="项目经费（万）"></el-table-column>
                 <el-table-column prop="date" label="立项时间"></el-table-column>
-                <el-table-column prop="date" label="结束时间"></el-table-column>
+                <el-table-column prop="endDate" label="结束时间"></el-table-column>
+                <el-table-column label="查看文献">
+                    <a  @click="check()" style="cursor:pointer">
+                        查看文献
+                    </a>
+                </el-table-column>
                 <el-table-column label="操作" width="180" align="center">
                     <template slot-scope="scope">
                         <!-- <el-button
                             type="text"
                             icon="el-icon-edit"
                             @click="handleEdit(scope.$index, scope.row)"
-                        >编辑</el-button> -->
+                        >查看文献</el-button> -->
                         <el-button
                             type="text"
                             icon="el-icon-delete"
@@ -64,9 +69,19 @@
                 ></el-pagination>
             </div>
         </div>
+        <!-- 分页 -->
+        <div class="tabListPage">
+           <el-pagination @size-change="handleSizeChange" 
+                          @current-change="handleCurrentChange" 
+                          :current-page="currentPage" 
+                          :page-sizes="pageSizes" 
+                          :page-size="PageSize" layout="total, sizes, prev, pager, next, jumper" 
+                          :total="totalCount">
+             </el-pagination>
+       </div>
 
         <!-- 编辑弹出框 -->
-        <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
+        <!-- <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
             <el-form ref="form" :model="form" label-width="70px">
                 <el-form-item label="用户名">
                     <el-input v-model="form.name"></el-input>
@@ -79,7 +94,7 @@
                 <el-button @click="editVisible = false">取 消</el-button>
                 <el-button type="primary" @click="saveEdit">确 定</el-button>
             </span>
-        </el-dialog>
+        </el-dialog> -->
     </div>
 </template>
 
@@ -93,7 +108,10 @@ export default {
                 address: '',
                 name: '',
                 pageIndex: 1,
-                pageSize: 10
+                // 个数选择器（可修改）
+                pageSizes:[1,2,3,4],
+                // 默认每页显示的条数（可修改）
+                PageSize:1,
             },
             tableData: [],
             multipleSelection: [],
@@ -113,7 +131,7 @@ export default {
         getData() {
             fetchData(this.query).then(res => {
                 console.log(res);
-                this.tableData = res.list;
+                this.tableData = res.item;
                 this.pageTotal = res.pageTotal || 50;
             });
         },
@@ -153,6 +171,10 @@ export default {
             this.idx = index;
             this.form = row;
             this.editVisible = true;
+        },
+        // 查看文献
+        check(){
+            alert("查看");
         },
         // 保存编辑
         saveEdit() {

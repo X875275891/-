@@ -93,7 +93,7 @@ export default {
                 address: '',
                 name: '',
                 pageIndex: 1,
-                pageSize: 10
+                pageSize: 4
             },
             tableData: [],
             multipleSelection: [],
